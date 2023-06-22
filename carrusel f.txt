@@ -1,0 +1,50 @@
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('image-carousel').mount();
+        });
+    </script> 
+
+
+<section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="/Carrusel/img/Car1.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="/Carrusel/img/Car2.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="/Carrusel/img/car10.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="/Carrusel/img/car7.jpg" alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="/Carrusel/img/car9.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- <script>
+        new Splide('image-carousel').mount();
+    </script> -->
+
+
+
+*************CSS**************
+.splide__slide img {
+    width: 20%;
+    height:20%;
+    object-fit: cover;
+}
+
+***********JS***********
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('image-carousel', {
+        heightRatio: 0.5,
+    }).mount();
+});
