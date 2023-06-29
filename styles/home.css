@@ -1,0 +1,13 @@
+header{
+    background-color: #C2C2C2 ;
+}
+
+body{
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+
+#title{
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
