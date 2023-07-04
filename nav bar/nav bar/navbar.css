@@ -6,7 +6,7 @@ body {
 }
 
 .container-fluid {
-    max-width: 800px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -17,7 +17,7 @@ body {
     padding: 10px;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: fixed;
     justify-content: flex-start;
     align-items: center;
     
@@ -47,6 +47,7 @@ body {
 
 .offcanvas-body {
     padding: 0;
+    size-adjust: 200px;
 }
 
 .navbar-nav .nav-link {
@@ -132,6 +133,7 @@ body {
 #searchInput {
     border: 1px solid #f8f9fa;
     border-bottom: 1px solid #494949;
+    align-content: center;
     border-radius: 0px;
     padding: 6px 12px;
     font-size: 14px;
@@ -142,6 +144,7 @@ body {
 
 #searchInput::placeholder {
     color: #494949;
+    align-content: center;
 }
 
 #searchInput:focus {
@@ -191,7 +194,7 @@ body {
 }
 
 #btn {
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     border: none;
     padding: 0;
     margin: 0;
@@ -202,5 +205,55 @@ body {
 #icon {
     width: 40px;
     height: 40px;
-}
+};
 
+@media (max-width: 768px){
+    
+    .navbar {
+        padding: 5px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: 0;
+        justify-content: flex-start;
+        align-items:center ;
+        
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #cecece;
+        font-size: 5px;
+        margin-right: 0px;
+    }
+    
+    .navbar-toggler-icon {
+        background-color: #f8f9fa;
+    }
+
+    #btn {
+        background-color: #f8f9fa;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 10px;
+        height: 10px;
+    }
+    
+    #icon {
+        width: 10px;
+        height: 10px;
+    };
+
+    #searchInput {
+        border: 1px solid #f8f9fa;
+        border-bottom: 1px solid #494949;
+        border-radius: 0px;
+        padding: 2px 6px;
+        font-size: 7px;
+        margin-left: 5px;
+        
+        background-color: #f8f9fa;
+    }
+}
