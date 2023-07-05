@@ -12,7 +12,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.5; /* Opacidad de la imagen de fondo */
+  opacity: 0.75; /* Opacidad de la imagen de fondo */
   z-index: -1; /* Para que el pseudo-elemento esté detrás del contenido */
 }
 
@@ -102,11 +102,14 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  border-radius: 0;
+  z-index: 9999;
 }
 
 .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 600px;
   background-color: #fff;
   padding: 20px;
@@ -146,10 +149,19 @@ body {
   margin-bottom: 0;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content textarea {
-  border-radius: 0;
+.form-control{
+  padding: 3px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: solid 0.5px;
+    border-radius: 0;
+    border-color: #494949;
+}
+
+.form-control:focus,
+.form-control:active {
+  box-shadow: none;
+  border-color: #494949;
 }
 
 .modal-content button {
