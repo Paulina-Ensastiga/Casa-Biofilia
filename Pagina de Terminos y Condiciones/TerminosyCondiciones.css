@@ -1,0 +1,58 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #c1c1c1, #f5f5f6)  !important;
+   
+}
+  
+  .container {
+    margin-top: 150px;
+    margin-bottom: 200px;
+    border-radius: 0px;
+  }
+  
+  .terms-card {
+    background-color: #f5f5f5 !important;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    
+  }
+  
+  .card-title {
+    color: #494949;
+    font-weight: bold;
+    font-family: "Noto Serif", serif;
+    text-align: center;
+  }
+  
+  .custom-divider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .card-text {
+    color: #838282;
+    text-align: justify;
+    line-height: 1.8;
+    font-family: "Noto Serif", serif;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 10px;
+    }
+  
+    .custom-divider {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .col-lg-8 {
+      width: 100%;
+    }
+  }
+  
