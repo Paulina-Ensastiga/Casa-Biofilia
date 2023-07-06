@@ -40,6 +40,7 @@
 }
 
 .banner-text {
+  font-size: 65px;
   font-family: 'Noto Serif', serif;
   font-weight: bolder;
   position: absolute;
