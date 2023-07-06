@@ -1,7 +1,7 @@
-const bloom = [
+const infinity = [
     {
     id: 1,
-    img: "/aseets/Desierto.jpg",
+    img: "/aseets/CP/INFINITY/Desierto.jpg",
     nombre: "Flores del desierto",
     precio: "$300",
     descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
@@ -9,16 +9,18 @@ const bloom = [
 },
 { 
     id: 2,
-    img: "/aseets/Ecos.jpg",
+    img: "/aseets/CP/INFINITY/Ecos.jpg",
     nombre: "Ecos del Sol",
     precio:"$300",
     descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
     
     
 },
+
+
 {
     id: 3,
-    img: "/aseets/Invernal.jpg",
+    img: "/aseets/CP/INFINITY/Invernal.jpg",
     nombre: "Belleza Invernal",
     precio: "$300",
     descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
@@ -26,24 +28,61 @@ const bloom = [
 },
 {
     id: 4,
-    img: "/aseets/Eterno.jpg",
+    img: "/aseets/CP/INFINITY/Eterno.jpg",
     nombre: "Esplendor Eterno",
     precio:"$300",
     descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
     
 },
+
 {
   id: 5,
-  img: "/aseets/Resplandor.jpg",
+  img: "/aseets/CP/INFINITY/Resplandor.jpg",
   nombre: "Resplandor",
   precio:"$300",
   descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
 
+},
+
+{
+  id: 6,
+  img: "/aseets/CJ/INFINITY/Des.jpg",
+  nombre: "Resplandor Deshidratado",
+  precio: "$300",
+  descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+},
+{
+  id: 7,
+  img:"/aseets/CJ/INFINITY/Tiempo.jpg",
+  nombre: "Ramas del Tiempo",
+  precio: "$300",
+  descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa",
+},
+{
+  id: 8,
+  img:"/aseets/CJ/INFINITY/Res.jpg",
+  nombre: "Florales Resilientes",
+  precio: "$300",
+  descripcion:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
+},
+{
+  id: 9,
+  img:"/aseets/CJ/INFINITY/Resplador.jpg",
+  nombre: "Vida Dormida",
+  precio: "$300",
+  descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
+},
+{
+  id: 10,
+  img:"/aseets/CJ/INFINITY/Belleza.jpg",
+  nombre: "Belleza Invernal",
+  precio: "$300",
+  descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
 }
 ];
 
 let card = document.getElementById("card-padre");
-bloom.map((x) => {
+infinity.map((x) => {
   card.innerHTML += `
    
   <div class="d-flex justify-content-center" > 
