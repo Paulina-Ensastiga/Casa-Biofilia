@@ -4,12 +4,12 @@ document.getElementById('productForm').addEventListener('submit', function(event
 });
 
 function validateProductForm() {
-  var productName = document.getElementById('productName').value.trim();
-  var productDescription = document.getElementById('productDescription').value.trim();
-  var productPrice = document.getElementById('productPrice').value.trim();
-  var productImage = document.getElementById('productImage').value;
+  let productName = document.getElementById('productName').value.trim();
+  let productDescription = document.getElementById('productDescription').value.trim();
+  let productPrice = document.getElementById('productPrice').value.trim();
+  let productImage = document.getElementById('productImage').value;
 
-  var alertContainer = document.getElementById('alertContainer');
+  let alertContainer = document.getElementById('alertContainer');
   alertContainer.innerHTML = '';
 
   if (productName === '' || productDescription === '' || productPrice === '' || productImage === '') {
@@ -24,10 +24,10 @@ function validateProductForm() {
 }
 
 function showAlert(message, type) {
-  var alertDiv = document.createElement('div');
+  let alertDiv = document.createElement('div');
   alertDiv.className = 'alert alert-' + type;
   alertDiv.innerHTML = message;
 
-  var alertContainer = document.getElementById('alertContainer');
+  let alertContainer = document.getElementById('alertContainer');
   alertContainer.appendChild(alertDiv);
 }

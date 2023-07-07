@@ -4,12 +4,12 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 });
 
 function validateForm() {
-  var nombre = document.getElementById('nombre').value.trim();
-  var email = document.getElementById('email').value.trim();
-  var telefono = document.getElementById('telefono').value.trim();
-  var password = document.getElementById('password').value.trim();
+  let nombre = document.getElementById('nombre').value.trim();
+  let email = document.getElementById('email').value.trim();
+  let telefono = document.getElementById('telefono').value.trim();
+  let password = document.getElementById('password').value.trim();
 
-  var alertContainer = document.getElementById('alertContainer');
+  let alertContainer = document.getElementById('alertContainer');
   alertContainer.innerHTML = '';
 
   if (nombre === '' || email === '' || telefono === '' || password === '') {
@@ -35,21 +35,21 @@ function validateForm() {
 
 function validateEmail(email) {
   // Expresión regular para validar el correo electrónico
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
 function validatePhone(phone) {
   // Expresión regular para validar el número de teléfono
-  var phoneRegex = /^\d{10}$/;
+  let phoneRegex = /^\d{10}$/;
   return phoneRegex.test(phone);
 }
 
 function showAlert(message, type) {
-  var alertDiv = document.createElement('div');
+  let alertDiv = document.createElement('div');
   alertDiv.className = 'alert alert-' + type;
   alertDiv.innerHTML = message;
 
-  var alertContainer = document.getElementById('alertContainer');
+  let alertContainer = document.getElementById('alertContainer');
   alertContainer.appendChild(alertDiv);
 }
