@@ -10,13 +10,82 @@
   <body>
 
     <!-- ==============================================Navbar=============================================== -->
-
-    <!-- ========================================Letras======================================================== -->
+    <nav class="navbar">
+    
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbarStart" aria-controls="offcanvasDarkNavbarStart" aria-label="Toggle navigation">
+              
+              <span class="navbar-toggler-icon"  ></span>
+              </button>
+              <img id="logo" src="/Casa-Biofilia/src/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
+              <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarStart" aria-labelledby="offcanvasDarkNavbarLabel">
+                  
+                  <div class="offcanvas-body">
+                      <ul class="navbar-nav">
+  
+                          <!-- <div class="search-bar">
+                              <input type="text" placeholder="Search...">
+                          </div> 
+                          <li class="search-bar">
+                              <input type="text" placeholder="Search...">
+                          </li>  buscador ....solo se queda en el desplegable  -->
+  
+  
+                          <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          </li>
+                          
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">About us</a>
+                          </li>
+                          <!-- <li class="nav-item">
+                              <a class="nav-link" href="#">PAGINA DEL FORMULARIO</a>
+                          </li>        -->
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Productos
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Velas</a></li>
+                                  <li><a class="dropdown-item" href="#">Pots</a></li>
+                                  <li><a class="dropdown-item" href="#">Home decoration</a></li>
+                                  <li><a class="dropdown-item" href="#">Cuadros</a></li>
+                                  <li><a class="dropdown-item" href="#">Bloom</a></li>
+                                  <li>
+                                      <hr class="dropdown-divider">
+                                  </li>
+                              <!--**<li><a class="dropdown-item" href="#"></a></li> -->
+                              </ul>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Eventos</a>
+                              </li>
+                              <li class="nav-item">
+                              <a class="nav-link" href="#">Contactanos</a>
+                          </li>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                  <form class="form-inline" onsubmit="event.preventDefault(); performSearch()">
+                      <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                  </form>
+              </div>
+              <button id="btn">
+              <img id="icon" src="/Casa-Biofilia/src/images/icons-NavBar/user-circle-light.svg" alt="">
+              </button>
+              <button id="btn">
+              <img id="icon" src="/Casa-Biofilia/src/images/icons-NavBar/shopping-cart-light.svg" alt="">
+              </button>
+              <!-- aqui queda el codigo grande de los iconos de bolsa y salida  -->
+          </div>
+      </nav>
+    <!-- ========================================Titulos======================================================== -->
     <div class="contenTitulo">
       <h1 class="title">Decoración sustentable hecha a la medida</h1>
       <h3 class="title">Porque todos merecemos cosas únicas</h3>
     </div>
-    <!--================================================Boton de Formulalrio=================================================-->
+    <!--================================================Formulalrio=================================================-->
     <button id="openModalBtn" class="btn btn-primary">Contactanos</button>
     <div id="modalForm" class="modal-container">
       <div class="modal-content">

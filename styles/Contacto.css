@@ -166,18 +166,18 @@ body {
 }
 
 .footer-icons a svg {
-  width: 30px; /* Ancho de 30 píxeles para los elementos SVG */
-  height: 30px; /* Altura de 30 píxeles para los elementos SVG */
-  fill: #494949; /* Color de relleno de los elementos SVG */
-  stroke: #494949; /* Color del contorno de los elementos SVG */
-  stroke-width: 0.5px; /* Ancho del contorno de los elementos SVG */
-  transition: stroke 0.3s ease, transform 0.3s ease; /* Transición suave de 0.3 segundos para los cambios en el color del contorno y en las transformaciones */
-  margin:15px; /* Margen de 20 píxeles para los elementos SVG */
+  width: 30px; 
+  height: 30px;
+  fill: #494949; 
+  stroke: #494949; 
+  stroke-width: 0.5px;
+  transition: stroke 0.3s ease, transform 0.3s ease; 
+  margin:15px; 
 }
 
 .footer-icons a:hover svg {
-  stroke: #fbff00; /* Color de trazo cuando se realiza "hover" */
-  transform: scale(1.2); /* Efecto de escala para hacer que el icono se agrande ligeramente */
+  stroke: #fbff00; 
+  transform: scale(1.2); 
 }
 
 .footer-links {
