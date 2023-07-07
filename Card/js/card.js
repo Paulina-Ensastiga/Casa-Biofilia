@@ -76,19 +76,22 @@ const infinity = [
 
 
 
+
+
+
 ];
 
 let card = document.getElementById("card-padre");
 infinity.map((x) => {
   card.innerHTML += `
    
-  <div class="d-flex justify-content-center" > 
+  <div class="d-flex justify-content-center">  
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-            <img src="${x.img}" alt="Card Front Image">   
+            <img src="${x.img}" alt="Card Front Image">      
         </div>
-      <div class= "flip-card-back">
+      <div class= "flip-card-back ">
         <div class="card-body">
         <h2 class="card-title text-center" id=nombreCarta>${x.nombre}</h2>
         <p class="card-text" id=parrafoCarta>${x.descripcion}</p>

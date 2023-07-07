@@ -109,6 +109,8 @@
 }
 .flip-card-back {
   transform: rotateY(180deg);
+  width: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,13 +119,13 @@
 }
 
 .card-content {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
  
 }
 
 .card-title{
-    margin-top: 50px;
+    margin-top: 20px;
     color: #fff;
     
 }

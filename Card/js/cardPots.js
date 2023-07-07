@@ -8,14 +8,14 @@ const pots = [
 },
 { 
   id: 2,
-  img: "/aseets/CP/POTS/Pots-2.jpg",
+  img: "/aseets/CP/POTS/posst-1.JPG",
   nombre: "Maceta tejida de cuerda:",
   precio:"$300",
   descripcion: "Una maceta confeccionada a mano utilizando técnicas de tejido con cuerda. Perfecta para realzar plantas de interior y añadir calidez a tu hogar."
 },
 {
   id: 3,
-  img: "/aseets/CP/POTS/Pots-3.jpg",
+  img: "/aseets/CP/POTS/posst-2.JPG",
   nombre: "Maceta de cemento moderna",
   precio: "$300",
   descripcion: "Una maceta de cemento en tono gris con un diseño contemporáneo. Ideal para plantas de interior con un estilo minimalista y urbano."
@@ -23,7 +23,7 @@ const pots = [
 },
 {
   id: 4,
-  img: "/aseets/CP/POTS/Pots-4.jpg",
+  img: "/aseets/CP/POTS/posst-3.JPG",
   nombre: "Maceta en forma de tetera alargada",
   precio:"$300",
   descripcion: "Una maceta única en forma de tetera alargada, perfecta para añadir un toque de originalidad a tu jardín o patio. Ideal para plantas suculentas y pequeños arbustos." 
@@ -31,7 +31,7 @@ const pots = [
 },
 {
   id: 5,
-  img: "/aseets/CP/POTS/Pots-5.jpg",
+  img: "/aseets/CP/POTS/post-10.JPG",
   nombre: "Maceta tradicional azul pequeña",
   precio:"$300",
   descripcion: "Una maceta tradicional en color azul de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios." 

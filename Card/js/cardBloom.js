@@ -32,6 +32,22 @@ const bloom = [
     descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
     
   },
+  {
+    id: 5,
+    img: "/aseets/CP/BLOOM/bloom-1.png",
+    nombre: "Frescura Floral",
+    precio:"$300",
+    descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
+    
+  },
+  {
+    id: 6,
+    img: "/aseets/CP/BLOOM/bloom-2.png",
+    nombre: "Frescura Floral",
+    precio:"$300",
+    descripcion: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", 
+    
+  },
 
   ];
   
