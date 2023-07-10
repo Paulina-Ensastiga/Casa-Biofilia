@@ -1,7 +1,15 @@
 /* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+<<<<<<< HEAD:styles/navbar.css
+body {
+    font-family: a;
+    margin: 0;
+    padding: 0;
+}
+=======
 
+>>>>>>> 9efa7d59839b49b2bbac69e1462f5fa01facecb3:CasaBiofilia-master/styles/navbar.css
 
 .container-fluid {
     max-width: 1500px;
@@ -227,6 +235,10 @@
     }
 
 
+<<<<<<< HEAD:styles/navbar.css
+
+=======
+>>>>>>> 9efa7d59839b49b2bbac69e1462f5fa01facecb3:CasaBiofilia-master/styles/navbar.css
 /* @media (max-width: 500px){
 
     .navbar {
