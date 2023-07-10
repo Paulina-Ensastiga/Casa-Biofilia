@@ -1,6 +1,7 @@
 /* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+
 .container-fluid {
     max-width: 1500px;
     margin: 0 auto;
@@ -177,7 +178,6 @@
 .navbar-nav .nav-link:focus::before {
     transform: scaleX(1);
 }
-
 
 .dropdown-menu {
     font-family:url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
