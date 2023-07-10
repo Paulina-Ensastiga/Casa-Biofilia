@@ -1,3 +1,14 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+.container-fluid {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
 /* Estilos de la barra de navegación */
 
 .navbar {
