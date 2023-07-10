@@ -190,6 +190,7 @@
     fill: #000;
 } */
 
+
 .dropdown-menu {
     font-family:url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
     ;
@@ -225,7 +226,6 @@
     #searchInput  {
     display: none;
     }
-
 
 
 /* @media (max-width: 500px){
