@@ -1,8 +1,9 @@
 /* =======================Imagen de fondo============================ */
 
 body::after {
+
   content: "";
-  background-image: url("../assets/images/Contacto/hierba-pampa-florero-cerca-pared-blanca_661495-33064.avif");
+  background-image: url("https://images.pexels.com/photos/6915197/pexels-photo-6915197.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,7 +19,13 @@ body::after {
 
 
 /* ========================================Navbar============================================= */
-
+.navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  /* Estilos adicionales de la barra de navegación */
+}
 /* =======================================Titulos=============================================== */
 body {
   display: flex;
@@ -27,7 +34,7 @@ body {
   height: 65vh;
   margin: 0;
   font-family: "Noto Serif", serif;
-  color: #494949;
+  color: #313030;
 }
 
 .contenTitulo {
