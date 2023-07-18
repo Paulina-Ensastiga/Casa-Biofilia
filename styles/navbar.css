@@ -20,7 +20,10 @@
     align-items: center;
 
 }
-
+#logo{
+    width: 170px;
+    height: 50px;
+}
 .navbar-toggler {
     border: none;
     outline: none;
@@ -33,6 +36,7 @@
 .navbar-toggler-icon {
     background-color: #f8f9fa;
 }
+
 
 .offcanvas-header {
     background-color: #333;
@@ -158,8 +162,7 @@
 }
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
 
---bs-offcanvas-width: 204px;
-
+    --bs-offcanvas-width: 200px;
 }
 
 /* Efectos sutiles */
