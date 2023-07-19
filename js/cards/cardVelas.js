@@ -1,6 +1,6 @@
 /*Array con objetos, cada array tiene atributos*/ 
 
-const bloom = [
+const velas = [
     {
     id: 1,
     img: "/assets/images/CP/VELAS/velas-1.png",
@@ -45,72 +45,288 @@ const bloom = [
   
   ];
 
-   /*Renderizamos tarjetas */
 
-  let card = document.getElementById("card-padre");
-  bloom.map((x) => {
-      /*se agrega el contenido generado dinámicamente al contenedor principal en el HTML utilizando innerHTML.*/ 
-  card.innerHTML += `
-   
-  <div class="d-flex justify-content-center" > 
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <img src="${x.img}" alt="Card Front Image">   
-        </div>
-      <div class= "flip-card-back">
-        <div class="card-body">
-        <h2 class="card-title text-center">${x.nombre}</h2>
-        <p class="card-text">${x.descripcion}</p>
-        <h4 class = "card-price"> ${x.precio}</h4>
-        <div flex "d flex justify-content.center">
-        <a href="#" class="btn"  id ="btn-comprar" text-center>Comprar Ahora </a>
-        </div>
-      </div>
-      </div>
-  </div>
-  </div></div>
-  `
+  let carrito = []; // Array para almacenar los elementos del carrito durante la sesión actual
+
+  let cardPadre = document.getElementById("card-padre");
+  let carritoContenedor = document.getElementById("carrito-items");
+  let carritoTotal = document.getElementById("carrito-precio-total");
   
+  velas.forEach((x) => {
+  let cardDiv = document.createElement("div");
+  cardDiv.className = "d-flex justify-content-center";
+  
+  let flipCard = document.createElement("div");
+  flipCard.className = "flip-card";
+  
+  let flipCardInner = document.createElement("div");
+  flipCardInner.className = "flip-card-inner";
+  
+  let flipCardFront = document.createElement("div");
+  flipCardFront.className = "flip-card-front";
+  
+  let img = document.createElement("img");
+  img.src = x.img;
+  img.alt = "Card Front Image";
+  
+  flipCardFront.appendChild(img);
+  flipCardInner.appendChild(flipCardFront);
+  
+  let flipCardBack = document.createElement("div");
+  flipCardBack.className = "flip-card-back";
+  
+  let cardBody = document.createElement("div");
+  cardBody.className = "card-body";
+  
+  let cardTitle = document.createElement("h2");
+  cardTitle.className = "card-title text-center";
+  cardTitle.textContent = x.nombre;
+  
+  let cardText = document.createElement("p");
+  cardText.className = "card-text";
+  cardText.textContent = x.descripcion;
+  
+  let cardPrice = document.createElement("h4");
+  cardPrice.className = "card-price";
+  cardPrice.textContent = x.precio;
+  
+  let cardButtonDiv = document.createElement("div");
+  cardButtonDiv.className = "text-center";
+  
+  let cardButton = document.createElement("button");
+  cardButton.className = "btn btn-verMas";
+  cardButton.id = "botonVerMas";
+  cardButton.textContent = "Ver más";
+  
+  cardButton.addEventListener("click", function() {
+    abrirModal(x.nombre, x.descripcion, x.precio, x.img);
   });
   
-  /*
-  <div class="row">
-                    <div class="col-4">
-                        <div class="col-12">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                  <div class="flip-card-front">
-                                    <img src= "${x.img}" class="card-img-top"/>
-                                  </div>
-                                  <div class="flip-card-back">
-                                    <h2 class="card-title text-center">${x.nombre}</h2>
-                                    <p class="card-text">${x.descripcion}</p>
-                                    <h4 class = "card-price" text center"> ${x.precio}</h4>
-                                    <div class="btn-comprar">
-                                    <a href="#" class="btn" id="btn-compra">Comprar Ahora </a>
-                                    </div
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                      </div>
-                    </div> */
+  cardButtonDiv.appendChild(cardButton);
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardText);
+  cardBody.appendChild(cardPrice);
+  cardBody.appendChild(cardButtonDiv);
+  flipCardBack.appendChild(cardBody);
+  flipCardInner.appendChild(flipCardBack);
+  flipCard.appendChild(flipCardInner);
+  cardDiv.appendChild(flipCard);
+  cardPadre.appendChild(cardDiv);
+  });
   
-                    /*
-                        <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src=${x.img} alt="Card Front Image">
-      </div>
-      <div class="flip-card-back">
-        <div class="card-content">
-          <h2>${x.nombre}</h2>
-          <p>${x.descripcion}</p>
-          <p> ${x.precio}</p>
-          <a href="#" class="btn">Comprar Ahora</a>
+  function abrirModal(nombre, descripcion, precio, img) {
+  let modalTitulo = document.getElementById("modalTitulo");
+  let modalDescripcion = document.getElementById("modalDescripcion");
+  let modalPrecio = document.getElementById("modalPrecio");
+  let modalImagen = document.getElementById("modalImagen");
+  let modalContainer = document.getElementById("modalProducto");
+  
+  modalTitulo.textContent = nombre;
+  modalDescripcion.textContent = descripcion;
+  modalPrecio.textContent = precio;
+  modalImagen.src = img;
+  
+  let modalButton = document.getElementById("btn-agregar");
+  modalButton.removeEventListener("click", agregarAlCarritoModal); // Eliminar el listener previo, si existe
+  modalButton.addEventListener("click", function() {
+    agregarAlCarritoModal(nombre, precio, img);
+    modal.hide(); // Ocultar el modal después de agregar al carrito
+  });
+  
+  let modal = new bootstrap.Modal(modalContainer);
+  modal.show();
+  }
+  
+function buscarItemEnCarrito(nombre) {
+  for (var i = 0; i < carrito.length; i++) {
+    if (carrito[i].nombre === nombre) {
+      return true; // Si el item se encuentra en el carrito, retornar true
+    }
+  }
+  return false; // Si el item no se encuentra en el carrito, retornar false
+  }
+  
+  function agregarAlCarritoModal(nombre, precio, img) {
+    // Verificar si el producto ya está en el carrito antes de agregarlo
+    const productoExistente = buscarItemEnCarrito(nombre);
+  
+    if (productoExistente) {
+      // Si el producto ya está en el carrito, no hacer nada
+      return;
+    }
+  
+    // Si el producto no está en el carrito, agregarlo con cantidad 1
+    let producto = {
+      nombre: nombre,
+      precio: precio,
+      img: img,
+      cantidad: 1,
+    };
+  
+    carrito.push(producto);
+    mostrarCarrito();
+  
+    mostrarAlertaProductoAgregado();
+  }
+  function mostrarAlertaProductoAgregado() {
+    const alerta = document.getElementById("productoAgregadoAlert");
+    alerta.classList.remove("d-none");
+  
+    // Ocultar la alerta después de 3 segundos (3000 milisegundos)
+    setTimeout(function () {
+      alerta.classList.add("d-none");
+    }, 3000);
+  }
+  
+  
+  function eliminarProducto(event) {
+    const nombreProducto = event.target.getAttribute("data-nombre");
+    carrito = carrito.filter((producto) => producto.nombre !== nombreProducto);
+    mostrarCarrito();
+  }
+  
+  // Asignar eventos click a los botones de eliminar
+  const botonesEliminar = document.querySelectorAll(".btn-eliminar");
+  botonesEliminar.forEach((boton) => {
+    boton.addEventListener("click", eliminarProducto);
+  });
+  
+  function mostrarCarrito() {
+  carritoContenedor.innerHTML = "";
+  
+  // Verificar si el carrito está vacío
+  if (carrito.length === 0) {
+    // Mostrar la alerta
+    document.getElementById('emptyCartAlert').classList.remove('d-none');
+    // Ocultar el contenedor de total cuando el carrito está vacío
+    carritoTotal.style.display = 'none';
+  } else {
+    // Si hay elementos en el carrito, ocultar la alerta
+    document.getElementById('emptyCartAlert').classList.add('d-none');
+    carritoTotal.style.display = 'block';
+  }
+  
+  document.addEventListener("DOMContentLoaded", mostrarCarrito);
+  
+  carrito.forEach((producto, index) => {
+    let itemCarritoContenido = `
+      <div class="carrito-item">
+        <img src="${producto.img}" width="80px" alt="">
+        <div class="carrito-item-detalles">
+          <span class="carrito-item-titulo">${producto.nombre}</span>
+          <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+          </div>
+          <span class="carrito-item-precio">$${(parseFloat(producto.precio.replace(/[^0-9.-]+/g, "")) * producto.cantidad).toFixed(2)}</span>
         </div>
+        <button class="btn-eliminar" data-nombre="${producto.nombre}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
       </div>
-    </div>
-  </div>
-  */
+    `;
+  
+    carritoContenedor.innerHTML += itemCarritoContenido;
+  });
+  
+  
+  // Eliminar eventos click de los botones de eliminar antes de asignarlos nuevamente
+  const botonesEliminar = document.querySelectorAll(".btn-eliminar");
+  botonesEliminar.forEach((boton) => {
+    boton.removeEventListener("click", eliminarProducto);
+  });
+  actualizarTotal();
+  
+  // Agregar el evento click a los botones de eliminar después de generar el contenido del carrito
+  botonesEliminar.forEach((boton) => {
+    boton.addEventListener("click", eliminarProducto);
+  });
+  
+  function actualizarCantidadYPrecio(event, incremento) {
+    const nombreProducto = event.target.parentNode.parentNode.querySelector(".carrito-item-titulo").textContent;
+    const producto = carrito.find((p) => p.nombre === nombreProducto);
+  
+    if (producto) {
+      const cantidadAnterior = producto.cantidad;
+      producto.cantidad += incremento;
+  
+      if (producto.cantidad < 1) {
+        producto.cantidad = 1;
+      }
+  
+      const precioBase = parseFloat(producto.precio.replace(/[^0-9.-]+/g, ""));
+      const nuevoPrecio = (precioBase * producto.cantidad).toFixed(2);
+  
+      event.target.parentNode.parentNode.querySelector(".carrito-item-cantidad").value = producto.cantidad;
+      event.target.parentNode.parentNode.querySelector(".carrito-item-precio").textContent = `$${nuevoPrecio}`;
+  
+      if (cantidadAnterior !== producto.cantidad) {
+        mostrarCarrito();
+      }
+    }
+  }
+  
+  // Función para incrementar la cantidad de un producto en el carrito
+  function aumentarCantidad(event) {
+    actualizarCantidadYPrecio(event, 1);
+  }
+  
+  // Función para decrementar la cantidad de un producto en el carrito
+  function disminuirCantidad(event) {
+    actualizarCantidadYPrecio(event, -1);
+  }
+  
+  
+  
+  // Obtener todos los botones de incrementar cantidad
+  const botonesAumentar = document.querySelectorAll(".sumar-cantidad");
+  
+  // Asignar eventos click a los botones de incrementar cantidad
+  botonesAumentar.forEach((boton) => {
+    boton.addEventListener("click", aumentarCantidad);
+  });
+  
+  // Obtener todos los botones de decrementar cantidad
+  const botonesDisminuir = document.querySelectorAll(".restar-cantidad");
+  
+  // Asignar eventos click a los botones de incrementar cantidad
+  botonesDisminuir.forEach((boton) => {
+    boton.addEventListener("click", disminuirCantidad);
+  });
+  
+  
+  
+  }
+  
+  
+  function actualizarTotal() {
+  let total = 0;
+  
+  carrito.forEach((producto) => {
+    // Obtener el valor numérico del precio (quitando el símbolo $ y cualquier otro carácter no numérico)
+    let precio = parseFloat(producto.precio.replace(/[^0-9.-]+/g, ""));
+    total += precio * producto.cantidad;
+  });
+  
+  carritoTotal.textContent = `$${total.toFixed(2)}`;
+  }
+  
+  mostrarCarrito();
+  
+    // // Obtener referencia al botón del carrito y al contenedor modal
+    // const btnCarrito = document.getElementById("btnCarrito");
+    // const modalCarrito = new bootstrap.Modal(document.getElementById("carritoModal"));
+  
+    // // Agregar un evento click al botón del carrito
+    // btnCarrito.addEventListener("click", () => {
+    //   modalCarrito.show(); // Mostrar el modal
+    // });
+  
+    //  // Función para mostrar el modal al hacer clic en el botón
+    //  function mostrarModal() {
+    //   $("#modalCarrito").modal("show");
+    // }
+  
+    // // Asigna el evento clic al botón para abrir el modal
+    // $("#btnAbrirModal").click(mostrarModal);

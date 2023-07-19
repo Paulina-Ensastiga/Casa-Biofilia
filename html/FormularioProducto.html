@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="/CasaBiofilia-master/styles/navbar.css">
-    <link rel="stylesheet" href="/CasaBiofilia-master/styles/FormularioProducto.css">   
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/FormularioProducto.css">   
     <title>Document</title>
 </head>
 <body>
@@ -17,38 +17,51 @@
           
           <span class="navbar-toggler-icon"  ></span>
           </button>
-          <img id="logo" src="/CasaBiofilia-master/assets/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
+          <img id="logoNav" src="/assets/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
           <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarStart" aria-labelledby="offcanvasDarkNavbarLabel">
               
               <div class="offcanvas-body">
                   <ul class="navbar-nav">
+
+                      <!-- <div class="search-bar">
+                          <input type="text" placeholder="Search...">
+                      </div> 
+                      <li class="search-bar">
+                          <input type="text" placeholder="Search...">
+                      </li>  buscador ....solo se queda en el desplegable  -->
+
+
                       <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="/CasaBiofilia-master/html/nosotros.html">Inicio</a>
+                          <a class="nav-link active" aria-current="page" href="/html/home.html">Inicio</a>
                       </li>
                       
                       <li class="nav-item">
-                          <a class="nav-link" href="/CasaBiofilia-master/html/nosotros.html">Sobre nosotros</a>
+                          <a class="nav-link" href="/html/nosotros.html">Sobre nosotros</a>
                       </li>
-                      <li class="nav-item dropdown"> <!--la barrra se despliega mostrando un nuevo menu de los productos existentes -->
+                      <!-- <li class="nav-item">
+                          <a class="nav-link" href="#">PAGINA DEL FORMULARIO</a>
+                      </li>        -->
+                      <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Productos
                           </a>
                           <ul class="dropdown-menu dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Velas</a></li>
-                              <li><a class="dropdown-item" href="#">Pots</a></li>
-                              <li><a class="dropdown-item" href="#">Home decoration</a></li>
-                              <li><a class="dropdown-item" href="#">Cuadros</a></li>
-                              <li><a class="dropdown-item" href="/CasaBiofilia-master/html/card.html">Infinity Secos</a></li>
-                              <li><a class="dropdown-item" href="#">Bloom</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/cardVelas.html">Velas</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/cardPots.html">Pots</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/card.HomeDe.html">Home decoration</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/cardCuadros.html">Cuadros</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/card.html">Infinity Secos</a></li>
+                              <li><a class="dropdown-item" href="/html/cards/cardBloom.html">Bloom</a></li>
                               <li>
                                   <hr class="dropdown-divider">
                               </li>
+                          <!--**<li><a class="dropdown-item" href="#"></a></li> -->
                           </ul>
                           <li class="nav-item">
                               <a class="nav-link" href="#">Eventos</a>
                           </li>
                           <li class="nav-item">
-                          <a class="nav-link" href="/CasaBiofilia-master/html/Contacto.html">Contáctanos</a>
+                          <a class="nav-link" href="/html/Contacto.html">Contactanos</a>
                       </li>
                       </li>
                   </ul>
@@ -60,13 +73,14 @@
               </form>
           </div>
           <button id="btn">
-            <a href="/CasaBiofilia-master/html/registro.html">
-          <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/user-circle-light.svg" alt="">
-            </a>
+          <a href="/html/RegistroInicio.html">
+          <img id="icon" src="/assets/images/icons-NavBar/user-circle-light.svg" alt="">
+          </a>
           </button>
           <button id="btn">
-          <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
+          <img id="icon" src="/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
           </button>
+          <!-- aqui queda el codigo grande de los iconos de bolsa y salida  -->
       </div>
   </nav>
 <!-- ======================================Formulario de nuevo producto================================================= -->
@@ -169,7 +183,7 @@
       </footer>
       <!-- ==========================================Links Scrips================================================= -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-      <script src="/CasaBiofilia-master/js/FormularioPrducto.js"></script>
+      <script src="/js/FormularioPrducto.js"></script>
 
     
 </body>
