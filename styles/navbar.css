@@ -1,8 +1,6 @@
 /* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-
-
 .container-fluid {
     max-width: 1500px;
     margin: 0 auto;
@@ -20,10 +18,12 @@
     align-items: center;
 
 }
+
 #logo{
     width: 170px;
     height: 50px;
 }
+
 .navbar-toggler {
     border: none;
     outline: none;
@@ -36,7 +36,6 @@
 .navbar-toggler-icon {
     background-color: #f8f9fa;
 }
-
 
 .offcanvas-header {
     background-color: #333;
@@ -163,6 +162,7 @@
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
 
     --bs-offcanvas-width: 200px;
+
 }
 
 /* Efectos sutiles */
@@ -182,16 +182,6 @@
 .navbar-nav .nav-link:focus::before {
     transform: scaleX(1);
 }
-
-/* .nav-icon svg {
-    fill: #333;
-    transition: fill 0.3s ease;
-    margin-left: 20px;
-} */
-
-/* .nav-icon:hover svg {
-    fill: #000;
-} */
 
 .dropdown-menu {
     font-family:url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -228,20 +218,6 @@
     #searchInput  {
     display: none;
     }
-
-
-
-/* @media (max-width: 500px){
-
-    .navbar {
-        padding: 5px;
-        background-color: #f8f9fa;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        display: 0;
-        justify-content: flex-start;
-        align-items:center ;
-
-    } */
 
     .navbar-toggler {
         border: none;

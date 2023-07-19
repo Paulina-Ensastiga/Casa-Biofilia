@@ -27,4 +27,3 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.search-bar').hide();
     });
 });
-*/
