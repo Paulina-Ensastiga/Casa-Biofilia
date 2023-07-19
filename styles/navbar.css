@@ -19,6 +19,11 @@
 
 }
 
+#logo{
+    width: 170px;
+    height: 50px;
+}
+
 .navbar-toggler {
     border: none;
     outline: none;
@@ -156,7 +161,7 @@
 }
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
 
---bs-offcanvas-width: 204px;
+    --bs-offcanvas-width: 200px;
 
 }
 
@@ -177,7 +182,6 @@
 .navbar-nav .nav-link:focus::before {
     transform: scaleX(1);
 }
-
 
 .dropdown-menu {
     font-family:url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -214,7 +218,6 @@
     #searchInput  {
     display: none;
     }
-
 
     .navbar-toggler {
         border: none;
