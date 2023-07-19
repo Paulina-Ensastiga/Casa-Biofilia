@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .banner {
   width: 100%;
   height: 300px;
@@ -6,6 +6,19 @@
   overflow: hidden;
   margin-left: 0;
   margin-right: 0;
+}
+
+.icon{
+  color: #494949 !important;
+  border: white;
+}
+#icon-carrito {
+  border: white; /* o cualquier otro borde que se esté aplicando */
+  margin:2%;
+  
+}
+#btnCarrito{
+  border:none ;
 }
 
 .banner:before {
@@ -29,8 +42,7 @@
 }
 
 .banner-text {
-  font-family: 'Noto Serif', serif, 'Poppins';
-  font-weight: bolder;
+  font-family: 'Noto Serif', serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,8 +51,7 @@
   color: #fff;
   text-shadow: 2px 2px 4px white (0, 0, 0, 0.5);
   letter-spacing: 10px;
-  font-weight: bold;
-  font-size: 200px;
+  font-size: 100px;
 
   ;
 }
@@ -49,18 +60,33 @@
   letter-spacing: 100px;
 }
 
+
+#nombrePrecio{
+  font-family: serif;
+}
+#parrafoCarta{
+
+  font-family: 'Poppins';
+  }
+#nombreCarta{
+  font-family: serif;
+}
+
+#btn-comprar{
+  font-family: 'Poppins';
+}
 .card-body
 {
     background-color: #494949;
     height:400px;
     color: #fff;
     
+ 
 }
 .flip-card {
   width: 300px;
   height: 400px;
   perspective: 1000px;
-  font-family: "Poppins";
 
 }
 
@@ -69,6 +95,7 @@
   width: 100%;
   height: 100%;
   border: none;
+
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -76,6 +103,7 @@
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -101,30 +129,27 @@
   color: #fff;
 }
 
+
+
 .card-content {
   padding: 30px;
   text-align: center;
  
- 
 }
 
 .card-title{
-  font-family: "Poppins";
-    margin-top: 15px;
+    margin-top: 20px;
     color: #fff;
-    font-size: 22px;
     
 }
 .card-content h2 {
-  font-family: "Poppins";
-  font-size: 15px;
+  font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
   
 }
 
 .card-text{
-    font-family: "Poppins";
     text-align:justify;
     margin-top: 20px;
     padding: 15px;
@@ -133,7 +158,6 @@
 
 
 .card-content p {
-  font-family:serif;
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
@@ -182,4 +206,147 @@
   color: black;
   background-color: rgb(255, 255, 255);
 }
+.container-fluid {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 15px;
+}
 
+
+#botonVerMas {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background-color: #494949;
+  border-radius: 0;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 200px;
+  margin-top: 50px;
+  border-color: #fff;
+
+}
+
+/* Estilos del modal */
+.modalcontainer {
+  display: none; /* Ocultar el modal por defecto */
+  background-color: rgba(255, 255, 255, 0.642); /* Fondo semitransparente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: auto;
+  
+}
+#modalProducto .modal-dialog {
+  width: 700px;
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: center;
+
+}
+#modalProducto .modal-content {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.modal-dialog {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 800px; /* Ancho máximo del modal */
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(255, 235, 235, 0.64);
+  text-align: center;
+
+}
+
+.modal-header {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+  justify-content: center !important;
+  
+
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family:serif;
+  color: #494949;
+
+  }
+
+.modal-body {
+  padding: 15px;
+    text-align: center;
+
+}
+#modalTitulo {
+  text-align: center;
+  margin: 0;
+}
+#modalPrecio{
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 70px;
+
+}
+#modalImagen{
+  width: 300px;
+  height: 400px;
+  
+}
+#modalDescripcion{
+  padding: 28px;
+  font-size: 22px;
+  text-align: justify;
+
+}
+.modal-footer {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  text-align: right;
+}
+
+
+
+/* Estilos para botones en el modal */
+#btn-agregar {
+  position: fixed;
+  transform: translate(-20%, -50%);
+  background-color: #494949;
+  border-radius: 0;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  border-color: #fff;
+  margin-bottom: 60px;
+  font-family: serif;
+}
+
+.modal-dialog-centered.modal-md {
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog-centered.modal-md {
+      max-width: 100%;
+  }
+}
