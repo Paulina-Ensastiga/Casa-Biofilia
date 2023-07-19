@@ -1,8 +1,8 @@
 // Función para validar el inicio de sesión
 function validarInicioSesion() {
   // Obtener el valor de los campos de correo electrónico y contraseña del formulario
-  var email = document.getElementById("logemail").value;
-  var password = document.getElementById("logpass").value;
+  let email = document.getElementById("logemail").value;
+  let password = document.getElementById("logpass").value;
 
   // Validar que el campo de correo electrónico no esté vacío
   if (email.trim() === "") {
@@ -25,7 +25,7 @@ function validarInicioSesion() {
   // Realizar la lógica de inicio de sesión
 
   // Obtener los datos de registro almacenados en localStorage
-  var registro = obtenerRegistroLocalStorage();
+  let registro = obtenerRegistroLocalStorage();
 
   // Comprobar si las credenciales ingresadas coinciden con las almacenadas
   if (registro && registro.email === email && registro.password === password) {
@@ -40,11 +40,11 @@ function validarInicioSesion() {
 // Función para validar el registro de usuarios
 function validarRegistro() {
   // Obtener los valores de los campos de nombre, apellido, correo electrónico, contraseña y teléfono del formulario
-  var name = document.getElementById("lognameR").value;
-  var lastname = document.getElementById("loglastnameR").value;
-  var email = document.getElementById("logemailR").value;
-  var password = document.getElementById("logpassR").value;
-  var phone = document.getElementById("logphoneR").value;
+  let name = document.getElementById("lognameR").value;
+  let lastname = document.getElementById("loglastnameR").value;
+  let email = document.getElementById("logemailR").value;
+  let password = document.getElementById("logpassR").value;
+  let phone = document.getElementById("logphoneR").value;
 
   // Validar que el campo de nombre no esté vacío
   if (name.trim() === "") {
@@ -97,13 +97,13 @@ function validarRegistro() {
 
 // Función para validar el formato de una dirección de correo electrónico
 function validarEmail(email) {
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
 // Función para mostrar una alerta de error con el mensaje proporcionado
 function mostrarAlerta(mensaje) {
-  var alertContainer = document.getElementById("alertContainer");
+  let alertContainer = document.getElementById("alertContainer");
   alertContainer.innerHTML = '<div class="alert alert-danger" role="alert">' + mensaje + '</div>';
 
   // Temporizador para desaparecer la alerta después de 4 segundos
@@ -114,7 +114,7 @@ function mostrarAlerta(mensaje) {
 
 // Función para mostrar un mensaje de éxito con el mensaje proporcionado
 function mostrarMensajeExitoso(mensaje) {
-  var alertContainer = document.getElementById("alertContainer");
+  let alertContainer = document.getElementById("alertContainer");
   alertContainer.innerHTML = '<div class="alert alert-success" role="alert">' + mensaje + '</div>';
 
   // Temporizador para desaparecer la alerta después de 4 segundos
@@ -125,7 +125,7 @@ function mostrarMensajeExitoso(mensaje) {
 
 // Función para guardar los datos de registro en el localStorage
 function guardarRegistroLocalStorage(name, lastname, email, password, phone) {
-  var registro = {
+  let registro = {
     name: name,
     lastname: lastname,
     email: email,
@@ -138,6 +138,6 @@ function guardarRegistroLocalStorage(name, lastname, email, password, phone) {
 
 // Función para obtener los datos de registro almacenados en el localStorage
 function obtenerRegistroLocalStorage() {
-  var registro = localStorage.getItem("registro");
+  let registro = localStorage.getItem("registro");
   return JSON.parse(registro);
 }
