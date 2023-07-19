@@ -163,6 +163,7 @@
 
     --bs-offcanvas-width: 200px;
 
+
 }
 
 /* Efectos sutiles */
@@ -218,6 +219,7 @@
     #searchInput  {
     display: none;
     }
+
 
     .navbar-toggler {
         border: none;
