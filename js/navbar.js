@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 /*$(document).ready(function() {
     $('.menu-bar').on('mouseenter', function() {
     $('.search-bar').show();
@@ -26,5 +27,3 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.search-bar').hide();
     });
 });
-*/
-
