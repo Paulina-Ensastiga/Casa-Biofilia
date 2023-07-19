@@ -10,85 +10,80 @@
   </head> 
   <body>
 
-    <!-- ==============================================Navbar=============================================== -->
-    <nav class="navbar">
+      <!-- ==============================================Navbar=============================================== -->
+      <nav class="navbar">
+      
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbarStart" aria-controls="offcanvasDarkNavbarStart" aria-label="Toggle navigation">
+                
+                <span class="navbar-toggler-icon"  ></span>
+                </button>
+                <img id="logo" src="/assets/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarStart" aria-labelledby="offcanvasDarkNavbarLabel">
+                    
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
     
-      <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbarStart" aria-controls="offcanvasDarkNavbarStart" aria-label="Toggle navigation">
-              
-              <span class="navbar-toggler-icon"  ></span>
-              </button>
-              <img id="logo" src="/CasaBiofilia-master/assets/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
-              <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarStart" aria-labelledby="offcanvasDarkNavbarLabel">
-                  
-                  <div class="offcanvas-body">
-                      <ul class="navbar-nav">
-  
-                          <!-- <div class="search-bar">
-                              <input type="text" placeholder="Search...">
-                          </div> 
-                          <li class="search-bar">
-                              <input type="text" placeholder="Search...">
-                          </li>  buscador ....solo se queda en el desplegable  -->
-  
-  
-                          <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/CasaBiofilia-master/html/home.html">Inicio</a>
-                          </li>
-                          
-                          <li class="nav-item">
-                              <a class="nav-link" href="/CasaBiofilia-master/html/nosotros.html">Sobre nosotros</a>
-                          </li>
-                          <!-- <li class="nav-item">
-                              <a class="nav-link" href="#">PAGINA DEL FORMULARIO</a>
-                          </li>        -->
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Productos
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Velas</a></li>
-                                  <li><a class="dropdown-item" href="#">Pots</a></li>
-                                  <li><a class="dropdown-item" href="#">Home decoration</a></li>
-                                  <li><a class="dropdown-item" href="#">Cuadros</a></li>
-                                  <li><a class="dropdown-item" href="/CasaBiofilia-master/html/card.html">Infinity Secos</a></li>
-                                  <li><a class="dropdown-item" href="/CasaBiofilia-master/html/cardBloom.html">Bloom</a></li>
-                                  <li>
-                                      <hr class="dropdown-divider">
-                                  </li>
-                              <!--**<li><a class="dropdown-item" href="#"></a></li> -->
-                              </ul>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Eventos</a>
-                              </li>
-                              <li class="nav-item">
-                              <a class="nav-link" href="/CasaBiofilia-master/html/Contacto.html">Contáctanos</a>
-                          </li>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="d-flex justify-content-center align-items-center flex-grow-1">
-                  <form class="form-inline" onsubmit="event.preventDefault(); performSearch()">
-                      <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                  </form>
-              </div>
-              <button id="btn">
-              <a href="/CasaBiofilia-master/html/registro.html">
-              <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/user-circle-light.svg" alt="">
-              </a>
-              </button>
-              <button id="btn">
-              <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
-              </button>
-              <!-- aqui queda el codigo grande de los iconos de bolsa y salida  -->
-          </div>
-      </nav>
-    <!-- ========================================Titulos======================================================== -->
-    <div class="contenTitulo">
-      <h1 class="title">Decoración sustentable hecha a la medida</h1>
-      <h3 class="title">Porque todos merecemos cosas únicas</h3>
-    </div>
+                            <!-- <div class="search-bar">
+                                <input type="text" placeholder="Search...">
+                            </div> 
+                            <li class="search-bar">
+                                <input type="text" placeholder="Search...">
+                            </li>  buscador ....solo se queda en el desplegable  -->
+    
+    
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/html/home.html">Inicio</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/nosotros.html">Sobre nosotros</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">PAGINA DEL FORMULARIO</a>
+                            </li>        -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Velas</a></li>
+                                    <li><a class="dropdown-item" href="#">Pots</a></li>
+                                    <li><a class="dropdown-item" href="#">Home decoration</a></li>
+                                    <li><a class="dropdown-item" href="#">Cuadros</a></li>
+                                    <li><a class="dropdown-item" href="/html/card.html">Infinity Secos</a></li>
+                                    <li><a class="dropdown-item" href="/html/cardBloom.html">Bloom</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                <!--**<li><a class="dropdown-item" href="#"></a></li> -->
+                                </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Eventos</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="/html/Contacto.html">Contactanos</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                    <form class="form-inline" onsubmit="event.preventDefault(); performSearch()">
+                        <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
+                </div>
+                <button id="btn">
+                  <a href="/html/registro.html">
+                <img id="icon" src="/assets/images/icons-NavBar/user-circle-light.svg" alt="">
+                </a>
+                </button>
+                <button id="btn">
+                <img id="icon" src="/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
+                </button>
+                <!-- aqui queda el codigo grande de los iconos de bolsa y salida  -->
+            </div>
+        </nav>
     <!--================================================Formulalrio=================================================-->
     <button id="openModalBtn" class="btn btn-primary">Contáctanos</button>
     <div id="modalForm" class="modal-container">
@@ -203,7 +198,7 @@
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
       crossorigin="anonymous"
     ></script>
-    <script src="/CasaBiofilia-master/js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
     <script src="../js/Contacto.js"></script>
   </body>
 </html>
