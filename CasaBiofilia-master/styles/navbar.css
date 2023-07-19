@@ -1,15 +1,6 @@
 /* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-<<<<<<< HEAD:styles/navbar.css
-body {
-    font-family: a;
-    margin: 0;
-    padding: 0;
-}
-=======
-
->>>>>>> 9efa7d59839b49b2bbac69e1462f5fa01facecb3:CasaBiofilia-master/styles/navbar.css
 
 .container-fluid {
     max-width: 1500px;
@@ -27,6 +18,11 @@ body {
     justify-content: flex-start;
     align-items: center;
 
+}
+
+#logoNav{
+    width: 170px !important;
+    height: 50px !important;
 }
 
 .navbar-toggler {
@@ -166,7 +162,8 @@ body {
 }
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
 
---bs-offcanvas-width: 204px;
+    --bs-offcanvas-width: 200px !important;
+
 
 }
 
@@ -187,16 +184,6 @@ body {
 .navbar-nav .nav-link:focus::before {
     transform: scaleX(1);
 }
-
-/* .nav-icon svg {
-    fill: #333;
-    transition: fill 0.3s ease;
-    margin-left: 20px;
-} */
-
-/* .nav-icon:hover svg {
-    fill: #000;
-} */
 
 .dropdown-menu {
     font-family:url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -234,22 +221,6 @@ body {
     display: none;
     }
 
-
-<<<<<<< HEAD:styles/navbar.css
-
-=======
->>>>>>> 9efa7d59839b49b2bbac69e1462f5fa01facecb3:CasaBiofilia-master/styles/navbar.css
-/* @media (max-width: 500px){
-
-    .navbar {
-        padding: 5px;
-        background-color: #f8f9fa;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        display: 0;
-        justify-content: flex-start;
-        align-items:center ;
-
-    } */
 
     .navbar-toggler {
         border: none;

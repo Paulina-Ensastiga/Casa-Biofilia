@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Casa Biofilia</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="/CasaBiofilia-master/styles/home.css">
-  <link rel="stylesheet" href="/CasaBiofilia-master/styles/navbar.css">
-  <link rel="stylesheet" href="/CasaBiofilia-master/styles/footer.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="/styles/footer.css">
   </head>
   <body>
 
@@ -18,7 +19,7 @@
               
               <span class="navbar-toggler-icon"  ></span>
               </button>
-              <img id="logo" src="/CasaBiofilia-master/assets/images/Banners-Home/LOGO- CASA BIOFILIA.svg" width="100px"  alt="" class=" d-none d-md-block">
+              <img id="logoNav" src="/assets/images/icons-NavBar/LOGO-NAVBAR.png" width="100px"  alt="" class=" d-none d-md-block">
               <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarStart" aria-labelledby="offcanvasDarkNavbarLabel">
                   
                   <div class="offcanvas-body">
@@ -33,11 +34,11 @@
   
   
                           <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                              <a class="nav-link active" aria-current="page" href="/html/home.html">Inicio</a>
                           </li>
                           
                           <li class="nav-item">
-                              <a class="nav-link" href="/CasaBiofilia-master/html/nosotros.html">Sobre nosotros</a>
+                              <a class="nav-link" href="/html/nosotros.html">Sobre nosotros</a>
                           </li>
                           <!-- <li class="nav-item">
                               <a class="nav-link" href="#">PAGINA DEL FORMULARIO</a>
@@ -47,12 +48,12 @@
                                   Productos
                               </a>
                               <ul class="dropdown-menu dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Velas</a></li>
-                                  <li><a class="dropdown-item" href="#">Pots</a></li>
-                                  <li><a class="dropdown-item" href="#">Home decoration</a></li>
-                                  <li><a class="dropdown-item" href="#">Cuadros</a></li>
-                                  <li><a class="dropdown-item" href="/CasaBiofilia-master/html/card.html">Infinity Secos</a></li>
-                                  <li><a class="dropdown-item" href="/CasaBiofilia-master/html/cardBloom.html">Bloom</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/cardVelas.html">Velas</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/cardPots.html">Pots</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/card.HomeDe.html">Home decoration</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/cardCuadros.html">Cuadros</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/card.html">Infinity Secos</a></li>
+                                  <li><a class="dropdown-item" href="/html/cards/cardBloom.html">Bloom</a></li>
                                   <li>
                                       <hr class="dropdown-divider">
                                   </li>
@@ -62,7 +63,7 @@
                                   <a class="nav-link" href="#">Eventos</a>
                               </li>
                               <li class="nav-item">
-                              <a class="nav-link" href="/CasaBiofilia-master/html/Contacto.html">Contactanos</a>
+                              <a class="nav-link" href="/html/Contacto.html">Contactanos</a>
                           </li>
                           </li>
                       </ul>
@@ -74,42 +75,44 @@
                   </form>
               </div>
               <button id="btn">
-              <a href="/CasaBiofilia-master/html/registro.html">
-              <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/user-circle-light.svg" alt="">
+              <a href="/html/RegistroInicio.html">
+              <img id="icon" src="/assets/images/icons-NavBar/user-circle-light.svg" alt="">
               </a>
               </button>
               <button id="btn">
-              <img id="icon" src="/CasaBiofilia-master/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
+              <img id="icon" src="/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
               </button>
               <!-- aqui queda el codigo grande de los iconos de bolsa y salida  -->
           </div>
       </nav>
 
-
       <section class="banner">
         <div class="banner-background">
-          <img src="/CasaBiofilia-master/assets/images/Banners-Home/img-home3.jpg" class="img-fluid" alt="Banner 1">
+          <video width="100%" height="auto" autoplay loop muted>
+            <source src="/assets/images/Banners-Home/Videos/4.mp4" type="video/mp4">
+          </video>
+          
+          
         </div>
         <div class="banner-content">
           <div class="banner-logo-container">
-            <img src="/CasaBiofilia-master/assets/images/Banners-Home/LOGO- CASA BIOFILIA.svg" class="banner-logo" alt="Logo Casa biofilia" style="">
+            <img src="/assets/images/Banners-Home/LOGO- CASA BIOFILIA.svg" class="banner-logo" alt="Logo Casa biofilia" style="">
           </div>
-          <h5 class="banner-text banner-text-small">El equilibrio entre la naturaleza y el hogar se hace realidad</h5>
         </div>
       </section>
       
       <section class="banner">
         <div class="banner-background">
-          <img src="/CasaBiofilia-master/assets/images/Banners-Home/img-home2.jpg" class="img-fluid" alt="Banner 2">
+          <a href="/html/cards/cardPots.html"><img src="/assets/images/Banners-Home/IMG_8236.png" class="img-fluid" alt="Banner 2"></a>
         </div>
         <div class="banner-content">
-          <h1 class="banner-text banner-text-large">Oferta Especial</h1>
+          <a href="/html/cards/cardPots.html"><h1 class="banner-text banner-text-large">Productos</h1></a>
         </div>
       </section>
       
       <section class="banner">
         <div class="banner-background">
-          <img src="/CasaBiofilia-master/assets/images/Banners-Home/img-home1.jpg" class="img-fluid" alt="Banner 3" id="">
+          <img src="/assets/images/Banners-Home/IMG_2125.png" class="img-fluid" alt="Banner 3" id="">
         </div>
         <div class="banner-content">
           <h1 class="banner-text banner-text-large">Eventos</h1>
