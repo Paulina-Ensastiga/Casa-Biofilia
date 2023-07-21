@@ -118,3 +118,33 @@ source{
   height: 100%;
   object-fit: cover;
 }
+
+/* Ajustar para la posición del botón */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Ajustar del botón */
+.btn {
+  font-family: 'Noto Serif', serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #494949; 
+  color: white; /
+  text-decoration: none; 
+  border: none; 
+  border-radius: 0px; 
+  cursor: pointer;
+  width: 140px;
+}
+
+/*hover de los botones*/
+.btn:hover {
+  background-color: black;
+}
+
+/* Para centrar horizontalmente el contenido del banner */
+.banner-content {
+  text-align: center;
+}
