@@ -269,12 +269,8 @@
 
 .modal-header {
   padding: 15px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
   text-align: center;
   justify-content: center !important;
-  
-
 }
 
 .modal-title {
@@ -316,8 +312,7 @@
 }
 .modal-footer {
   padding: 15px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
+
   text-align: right;
 }
 
