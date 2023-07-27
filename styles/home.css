@@ -119,9 +119,3 @@ source{
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .banner-logo{
-    max-width: 50%;
-    height: auto;
-  }
-}

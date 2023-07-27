@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+body{
+    background-color: #797979;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #494949;
+    padding: 10px;
+    top: 0; /* Colocar la barra en la parte superior */
+    left: 0;
+    width: 100%; /* Ancho completo */
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color: #494949;
+    background-color: #fcfcfc;
+}
+
+.navbar-menu span {
+    width: 30px;
+    height: 2px;
+    background-color: #494949;
+    margin: 4px;
+
+    
+}
+
+.navbar-logo {
+    font-weight: bold;
+    margin-left: 20px; /* Separación de 30px entre el logotipo y el menú */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 110px;
+    background-color: #fcfcfc;
+
+}
+
+.navbar-search {
+    flex: 1;
+    text-align: center;
+    margin: 0px;
+    border: none;
+    margin-left: 10px;
+    background-color: #fcfcfc;
+}
+
+.navbar-search input {
+    padding: 5px;
+    font-family:'Noto Serif', serif;
+    font-size: 18px;
+    border-radius: 0px;
+    border: none;
+    width: 100%; /* Aseguramos que el input ocupe todo el espacio disponible */
+    max-width: 300px; /* Limitamos el ancho máximo del input para que no se expanda demasiado */
+    border: none;
+    background-color: #fcfcfc;
+    border-bottom: solid 0.5px #494949;
+}
+
+input:focus, input:active {
+    box-shadow: none;
+    outline: transparent;
+}
+
+.navbar-icons {
+    display: flex;
+    background-color: #fcfcfc;
+    color: #494949;    
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 40px;
+    background-color: #fcfcfc;
+    color: #494949;    
+}
+.icono-carrito{
+    margin-left: 15px;
+    margin-right: 40px;
+    background-color: #fcfcfc;
+    color: #494949;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+}
+
+a {
+    text-decoration: none;
+    background-color: #fcfcfc;
+    color: #494949;
+}
+
+.menu-list {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: 100%;
+    max-height:100vh;
+    background-color: #fcfcfc;
+    padding: 10px;
+    border-radius: 0px;
+    z-index: 1;
+}
+
+.menu-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    position: relative;
+    background-color: #fcfcfc;
+}
+
+.menu-list li {
+    color: #494949;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+    font-family:'Noto Serif', serif;
+    background-color: #fcfcfc;
+}
+
+
+.close-button {
+    height: 1px;
+    position: absolute;
+    font-family:'Noto Serif', serif;
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #494949;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.dropdown {
+    position: fixe;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: none;
+    margin-top: 0px !important;
+    padding: 0px 0;
+    border-radius: 0px;
+    width: 100%;
+    z-index: 2;
+    background-color: #fcfcfc;
+    margin: none;
+    border: none;
+}
+
+.dropdown-menu li {
+    padding: 0px 0px;
+    color: #494949;
+    cursor: pointer;
+    font-size: 16px !important;
+    font-family:'Noto Serif', serif;
+
+}
+
+/* .dropdown-menu li:hover {
+    background-color: #e8e8e8;
+} */
+
+.search-container{
+    display: none;
+}
+
+.btn-list{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar{
+        z-index: 2; 
+
+    }
+
+    .navbar-menu {
+        display: flex;
+    }
+    .menu-list {
+        display: block;
+        height: 100%;
+        width: 55%;
+        z-index: 2; 
+    }
+    .menu-list.show {
+        display: block;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px;
+        left: 80%;
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #494949;
+        cursor: pointer;
+    }
+    /* Estilos para versiones móviles (ancho menor o igual a 768px) */
+    .navbar-search {
+        display: none;
+    }
+    .search-container {
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+        padding: 10px;
+        background-color: #ffffff;   
+    }
+    .search-container input {
+        padding: 5px;
+        font-family: sans-serif;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+        width: 100%; /* Aseguramos que el input ocupe todo el espacio disponible */
+        max-width: 210px; /* Limitamos el ancho máximo del input para que no se expanda demasiado */
+        border: none;
+        background-color: #fcfcfc;
+        border-bottom: solid 0.5px #494949;
+    }
+    .btn-list{
+        display: block;
+
+        margin-top: 30px;
+        margin-left: 50px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 55px;
+    }
+    .btn-registro{
+        display: none;
+    }
+}

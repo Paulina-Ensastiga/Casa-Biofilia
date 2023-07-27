@@ -5,11 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/FormDirec.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/nav2.0.css">
 
 
     <title>Formulario de Direccion</title>
 </head>
 <body>
+  <!-- <----------------------------------------------------NavBar-------------------------------------------------------------> -->
+  <nav class="navbar">
+    <div class="navbar-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  
+    <a href="/html/home.html"><img class="navbar-logo" src="/assets/images/icons-NavBar/LOGO- CASA BIOFILIA.svg" alt=""> </a>   
+    
+    <div class="navbar-search">
+        <input type="text" placeholder="Buscar...">
+    </div>
+    <div class="navbar-icons">
+        <button class="btn btn-registro">
+            <a href="/html/RegistroInicio.html">
+            <img id="icon" class="icon" src="/assets/images/icons-NavBar/user-circle-light.svg" alt="">
+            </a>
+        </button>
+        <button id="btn" class="btn btn-registro" data-toggle="modal" data-target="#carritoModal">
+          <img id="icon" class="icono-carrito" src="/assets/images/icons-NavBar/shopping-cart-light.svg" alt="">
+        </button> 
+    </div>
+</nav>
+
+<div class="menu-list" id="menuList">
+    <button class="close-button" onclick="toggleMenu()">&times;</button>
+    <div class="search-container">
+        <input  type="text" placeholder="Buscar...">
+    </div>
+    <ul>
+        <li><a href="/html/home.html">Inicio</a></li>
+        <li><a href="/html/nosotros.html">Sobre nosotros</a></li>
+        <li class="dropdown">
+            Productos
+            <ul class="dropdown-menu">
+                <li><a href="/html/cards/cardVelas.html">Velas</a></li>
+                <li><a href="/html/cards/cardPots.html">Pots</a></li>
+                <li><a href="/html/cards/card.HomeDe.html">Home Decoration</a></li>
+                <li><a href="/html/cards/cardCuadros.html">Cuadros</a></li>
+                <li><a href="/html/cards/card.html">Infinity Secos</a></li>
+                <li><a href="/html/cards/cardBloom.html">Bloom</a></li>
+            </ul>
+        </li>
+        <li><a href="">Eventos</a></li>
+        <li><a href="/html/Contacto.html">Contactanos</a></li>
+    </ul>
+    <button class="btn-list">
+        <a href="/html/RegistroInicio.html">
+        <img id="icon" class="icon" src="/assets/images/icons-NavBar/user-circle-light.svg" alt="">
+        </a>
+    </button>
+</div>
+<!-- <----------------------------------------------------Termina NavBar------------------------------------------------------------->
     <div class="container">
         <div class="image-container">
             <img class="imagen" src="https://images.pexels.com/photos/6805523/pexels-photo-6805523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen del producto">
@@ -144,5 +199,6 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
   <script src="/js/FormDirec.js"></script>
+  <script src="/js/nav2.0.js"></script>
 </body>
 </html>
