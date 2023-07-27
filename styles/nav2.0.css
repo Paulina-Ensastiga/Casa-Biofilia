@@ -211,6 +211,11 @@ a {
 
     }
 
+    .icon{
+        z-index: 2; 
+
+    }
+
     .navbar-menu {
         display: flex;
     }
@@ -258,13 +263,13 @@ a {
     }
     .btn-list{
         display: block;
-
         margin-top: 30px;
         margin-left: 50px;
         background-color: transparent;
         border: none;
         padding: 0;
         width: 55px;
+        color: #494949;
     }
     .btn-registro{
         display: none;
