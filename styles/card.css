@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .banner {
   width: 100%;
@@ -267,14 +268,20 @@
 
 }
 
+#closebu{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  opacity: 0.5;
+  cursor: pointer;
+}
 .modal-header {
   padding: 15px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
   text-align: center;
   justify-content: center !important;
-  
-
 }
 
 .modal-title {
@@ -316,8 +323,7 @@
 }
 .modal-footer {
   padding: 15px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
+
   text-align: right;
 }
 
@@ -349,4 +355,5 @@
   .modal-dialog-centered.modal-md {
       max-width: 100%;
   }
+
 }
