@@ -1,3 +1,4 @@
+
 /*Array con objetos, cada array tiene atributos*/ 
 
 const velas = [
@@ -131,3 +132,4 @@ const velas = [
   modal.show();
   }
   
+

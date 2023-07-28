@@ -1,3 +1,4 @@
+
 /*Array con objetos, cada array tiene atributos*/ 
 
 const homede = [

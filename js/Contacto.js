@@ -1,4 +1,7 @@
 //==================Formulario=================================
+function cerrarModal() {
+  modalForm.style.display = 'none';
+}
 
 // Obtener referencia al botón "Contactanos" y al formulario modal
 const openModalBtn = document.getElementById('openModalBtn');
@@ -109,3 +112,5 @@ function showAlert(type, message) {
 
   document.getElementById('alertContainer').appendChild(alertElement); // Agregar la alerta al contenedor
 }
+
+

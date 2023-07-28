@@ -1,5 +1,4 @@
-
- const infinity = [
+const infinity = [
   {
   id: 1,
   img: "/assets/images/CP/INFINITY/Desierto.jpg",
