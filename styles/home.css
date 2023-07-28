@@ -66,10 +66,10 @@ source{
 
 /* Logotipo del banner con un ancho de 1000px y altura automática */
 .banner-logo {
-.banner-logo {
+
   max-width: 100%;
   height: auto;
-}
+
 }
 
 /* Texto del banner con fuente 'Noto Serif', negrita, color negro, sombra de texto y cursor de puntero */
@@ -119,6 +119,7 @@ source{
   object-fit: cover;
 }
 
+
 /* Ajustar para la posición del botón */
 .button-container {
   text-align: center;
@@ -155,3 +156,4 @@ source{
     height: auto;
   }
 }
+
