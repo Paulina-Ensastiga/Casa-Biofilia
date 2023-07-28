@@ -13,7 +13,7 @@ const pots = [
   img: "/assets/images/CP/POTS/posst-1.JPG",
   nombre: "Maceta tejida de cuerda:",
   precio:"$300",
-  descripcion: "Una maceta confeccionada a mano utilizando técnicas de tejido con cuerda. Perfecta para realzar plantas de interior y añadir calidez a tu hogar."
+  descripcion: "Una maceta tradicional de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios."
 },
 {
   id: 3,
@@ -28,15 +28,14 @@ const pots = [
   img: "/assets/images/CP/POTS/posst-3.JPG",
   nombre: "Maceta en forma de tetera alargada",
   precio:"$300",
-  descripcion: "Una maceta única en forma de tetera alargada, perfecta para añadir un toque de originalidad a tu jardín o patio. Ideal para plantas suculentas y pequeños arbustos." 
-  
+  descripcion: "Una maceta de cemento en tono gris con un diseño contemporáneo. Ideal para plantas de interior con un estilo minimalista y urbano."
 },
 {
   id: 5,
   img: "/assets/images/CP/POTS/post-10.JPG",
   nombre: "Maceta tradicional azul pequeña",
   precio:"$300",
-  descripcion: "Una maceta tradicional en color azul de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios." 
+  descripcion: "Una maceta tradicional de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios." 
   
 },
 {
@@ -44,18 +43,13 @@ const pots = [
   img: "/assets/images/CP/POTS/Pots-2.jpg",
   nombre: "Maceta tradicional azul pequeña",
   precio:"$300",
-  descripcion: "Una maceta tradicional en color azul de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios.", 
+  descripcion: "Una maceta tradicional de tamaño reducido, ideal para plantas pequeñas y suculentas. Añade un toque de color y encanto a tus espacios.", 
   
 }
 ];
 
 
-let carrito = []; // Array para almacenar los elementos del carrito durante la sesión actual
-
 let cardPadre = document.getElementById("card-padre");
-let carritoContenedor = document.getElementById("carrito-items");
-let carritoTotal = document.getElementById("carrito-precio-total");
-
 pots.forEach((x) => {
 let cardDiv = document.createElement("div");
 cardDiv.className = "d-flex justify-content-center";
@@ -141,197 +135,3 @@ let modal = new bootstrap.Modal(modalContainer);
 modal.show();
 }
 
-
-function buscarItemEnCarrito(nombre) {
-  for (var i = 0; i < carrito.length; i++) {
-    if (carrito[i].nombre === nombre) {
-      return true; // Si el item se encuentra en el carrito, retornar true
-    }
-  }
-  return false; // Si el item no se encuentra en el carrito, retornar false
-  }
-  
-  function agregarAlCarritoModal(nombre, precio, img) {
-    // Verificar si el producto ya está en el carrito antes de agregarlo
-    const productoExistente = buscarItemEnCarrito(nombre);
-  
-    if (productoExistente) {
-      // Si el producto ya está en el carrito, no hacer nada
-      return;
-    }
-  
-    // Si el producto no está en el carrito, agregarlo con cantidad 1
-    let producto = {
-      nombre: nombre,
-      precio: precio,
-      img: img,
-      cantidad: 1,
-    };
-  
-    carrito.push(producto);
-    mostrarCarrito();
-  
-    mostrarAlertaProductoAgregado();
-  }
-  function mostrarAlertaProductoAgregado() {
-    const alerta = document.getElementById("productoAgregadoAlert");
-    alerta.classList.remove("d-none");
-  
-    // Ocultar la alerta después de 3 segundos (3000 milisegundos)
-    setTimeout(function () {
-      alerta.classList.add("d-none");
-    }, 3000);
-  }
-  
-  
-  function eliminarProducto(event) {
-    const nombreProducto = event.target.getAttribute("data-nombre");
-    carrito = carrito.filter((producto) => producto.nombre !== nombreProducto);
-    mostrarCarrito();
-  }
-  
-  // Asignar eventos click a los botones de eliminar
-  const botonesEliminar = document.querySelectorAll(".btn-eliminar");
-  botonesEliminar.forEach((boton) => {
-    boton.addEventListener("click", eliminarProducto);
-  });
-  
-  function mostrarCarrito() {
-  carritoContenedor.innerHTML = "";
-  
-  // Verificar si el carrito está vacío
-  if (carrito.length === 0) {
-    // Mostrar la alerta
-    document.getElementById('emptyCartAlert').classList.remove('d-none');
-    // Ocultar el contenedor de total cuando el carrito está vacío
-    carritoTotal.style.display = 'none';
-  } else {
-    // Si hay elementos en el carrito, ocultar la alerta
-    document.getElementById('emptyCartAlert').classList.add('d-none');
-    carritoTotal.style.display = 'block';
-  }
-  
-  document.addEventListener("DOMContentLoaded", mostrarCarrito);
-  
-  carrito.forEach((producto, index) => {
-    let itemCarritoContenido = `
-      <div class="carrito-item">
-        <img src="${producto.img}" width="80px" alt="">
-        <div class="carrito-item-detalles">
-          <span class="carrito-item-titulo">${producto.nombre}</span>
-          <div class="selector-cantidad">
-            <i class="fa-solid fa-minus restar-cantidad"></i>
-            <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
-            <i class="fa-solid fa-plus sumar-cantidad"></i>
-          </div>
-          <span class="carrito-item-precio">$${(parseFloat(producto.precio.replace(/[^0-9.-]+/g, "")) * producto.cantidad).toFixed(2)}</span>
-        </div>
-        <button class="btn-eliminar" data-nombre="${producto.nombre}">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
-    `;
-  
-    carritoContenedor.innerHTML += itemCarritoContenido;
-  });
-  
-  
-  // Eliminar eventos click de los botones de eliminar antes de asignarlos nuevamente
-  const botonesEliminar = document.querySelectorAll(".btn-eliminar");
-  botonesEliminar.forEach((boton) => {
-    boton.removeEventListener("click", eliminarProducto);
-  });
-  actualizarTotal();
-  
-  // Agregar el evento click a los botones de eliminar después de generar el contenido del carrito
-  botonesEliminar.forEach((boton) => {
-    boton.addEventListener("click", eliminarProducto);
-  });
-  
-  function actualizarCantidadYPrecio(event, incremento) {
-    const nombreProducto = event.target.parentNode.parentNode.querySelector(".carrito-item-titulo").textContent;
-    const producto = carrito.find((p) => p.nombre === nombreProducto);
-  
-    if (producto) {
-      const cantidadAnterior = producto.cantidad;
-      producto.cantidad += incremento;
-  
-      if (producto.cantidad < 1) {
-        producto.cantidad = 1;
-      }
-  
-      const precioBase = parseFloat(producto.precio.replace(/[^0-9.-]+/g, ""));
-      const nuevoPrecio = (precioBase * producto.cantidad).toFixed(2);
-  
-      event.target.parentNode.parentNode.querySelector(".carrito-item-cantidad").value = producto.cantidad;
-      event.target.parentNode.parentNode.querySelector(".carrito-item-precio").textContent = `$${nuevoPrecio}`;
-  
-      if (cantidadAnterior !== producto.cantidad) {
-        mostrarCarrito();
-      }
-    }
-  }
-  
-  // Función para incrementar la cantidad de un producto en el carrito
-  function aumentarCantidad(event) {
-    actualizarCantidadYPrecio(event, 1);
-  }
-  
-  // Función para decrementar la cantidad de un producto en el carrito
-  function disminuirCantidad(event) {
-    actualizarCantidadYPrecio(event, -1);
-  }
-  
-  
-  
-  // Obtener todos los botones de incrementar cantidad
-  const botonesAumentar = document.querySelectorAll(".sumar-cantidad");
-  
-  // Asignar eventos click a los botones de incrementar cantidad
-  botonesAumentar.forEach((boton) => {
-    boton.addEventListener("click", aumentarCantidad);
-  });
-  
-  // Obtener todos los botones de decrementar cantidad
-  const botonesDisminuir = document.querySelectorAll(".restar-cantidad");
-  
-  // Asignar eventos click a los botones de incrementar cantidad
-  botonesDisminuir.forEach((boton) => {
-    boton.addEventListener("click", disminuirCantidad);
-  });
-  
-  
-  
-  }
-  
-  
-  function actualizarTotal() {
-  let total = 0;
-  
-  carrito.forEach((producto) => {
-    // Obtener el valor numérico del precio (quitando el símbolo $ y cualquier otro carácter no numérico)
-    let precio = parseFloat(producto.precio.replace(/[^0-9.-]+/g, ""));
-    total += precio * producto.cantidad;
-  });
-  
-  carritoTotal.textContent = `$${total.toFixed(2)}`;
-  }
-  
-  mostrarCarrito();
-  
-    // // Obtener referencia al botón del carrito y al contenedor modal
-    // const btnCarrito = document.getElementById("btnCarrito");
-    // const modalCarrito = new bootstrap.Modal(document.getElementById("carritoModal"));
-  
-    // // Agregar un evento click al botón del carrito
-    // btnCarrito.addEventListener("click", () => {
-    //   modalCarrito.show(); // Mostrar el modal
-    // });
-  
-    //  // Función para mostrar el modal al hacer clic en el botón
-    //  function mostrarModal() {
-    //   $("#modalCarrito").modal("show");
-    // }
-  
-    // // Asigna el evento clic al botón para abrir el modal
-    // $("#btnAbrirModal").click(mostrarModal);
